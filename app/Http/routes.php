@@ -26,6 +26,12 @@ Route::get('/tables', function()
 	return View::make('table');
 });
 
+
+Route::get('/leereenheid', function()
+{
+	return View::make('leereenheid');
+});
+
 Route::get('/forms', function()
 {
 	return View::make('form');
