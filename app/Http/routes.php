@@ -16,6 +16,11 @@ Route::get('/', function()
 	return View::make('home');
 });
 
+Route::get( '/leereenheden', function()
+{
+	return View::make('leereenheden');
+});
+
 Route::get('/charts', function()
 {
 	return View::make('mcharts');
