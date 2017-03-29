@@ -164,7 +164,10 @@
                         <li {{ (Request::is('/') ? 'class="active"' : '') }}>
                             <a href="{{ url ('') }}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
-                        <li {{ (Request::is('*charts') ? 'class="active"' : '') }}>
+                        <li {{ (Request::is('*leereenheden') ? 'class="active"' : '') }}>
+                            <a href="{{ url ('leereenheden') }}"><i class="fa fa-th fa-fw"></i> Leereenheden</a>
+                        </li>
+                        <li {{ (Request::is('*charts') ? 'class="active"' : '') }}> 
                             <a href="{{ url ('charts') }}"><i class="fa fa-bar-chart-o fa-fw"></i> Charts</a>
                             <!-- /.nav-second-level -->
                         </li>
