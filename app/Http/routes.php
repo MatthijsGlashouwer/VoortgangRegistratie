@@ -16,6 +16,16 @@ Route::get('/', function()
 	return View::make('home');
 });
 
+Route::get('/contact', function()
+{
+	return View::make('contact');
+});
+
+Route::get('/projecten', function()
+{
+	return View::make('projecten');
+});
+
 Route::get( '/leereenheden', function()
 {
 	return View::make('leereenheden');
