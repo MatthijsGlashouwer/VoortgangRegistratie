@@ -22,15 +22,6 @@
             <div class="box-body">
                      <div class="col-sm-6">
                      <div  align="center"> <img alt="User Pic" src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" id="profile-image1" class="img-circle img-responsive"> 
-                
-                <input id="profile-image-upload" class="hidden" type="file">
-<div style="color:#999;" >click here to change profile image</div>
-                <!--Upload Image Js And Css-->
-           
-              
-   
-                
-                
                      
                      
                      </div>
@@ -40,7 +31,7 @@
               <!-- /input-group -->
             </div>
             <div class="col-sm-6">
-            <h4 style="color:#00b1b1;">Erwin Lanting </h4></span>
+            <h4 style="color:#00000;">Erwin Lanting </h4></span>
               <span><p>Student</p></span>            
             </div>
             <div class="clearfix"></div>
@@ -76,6 +67,18 @@
 <div class="bot-border"></div>
 
 <div class="col-sm-5 col-xs-6 tital " >Religie:</div><div class="col-sm-7">Christelijk</div>
+
+<div class="col-sm-5 col-xs-6 tital " >Telefoonnummer:</div><div class="col-sm-7 col-xs-6 ">06.....</div>
+     <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " >Emailadres:</div><div class="col-sm-7 col-xs-6 ">209259@fcroc.nl</div>
+     <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " >Portfolio:</div><div class="col-sm-7 col-xs-6 ">Voorbeeld.nl</div>
+     <div class="clearfix"></div>
+<div class="bot-border"></div>
 
 
             <!-- /.box-body -->
