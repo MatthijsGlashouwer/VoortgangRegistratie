@@ -16,7 +16,7 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-9">
-                                    <div class="huge">Project 1</div>
+                                    <h3>Project 1</h3>
                                     <div> 
                                     @include('widgets.progress', array('class'=> 'success', 'value'=>'40'))
                                             <span class="sr-only">40% Complete (success)</span>
@@ -39,7 +39,7 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-9">
-                                    <div class="huge">Project 2</div>
+                                    <h3>Project 2</h3>
                                     <div>
                                     @include('widgets.progress', array('class'=> 'success', 'value'=>'20'))
                                             <span class="sr-only">20% Complete</span> 
@@ -62,7 +62,7 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-9">
-                                    <div class="huge">Project 3</div>
+                                    <h3>Project 3</h3>
                                     <div>
                                     @include('widgets.progress', array('class'=> 'success', 'value'=>'80'))
                                             <span class="sr-only">80% Complete</span>
@@ -85,7 +85,7 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-9">
-                                    <div class="huge">Project 4</div>
+                                    <h3>Project 4</h3>
                                     <div>
                                     @include('widgets.progress', array('class'=> 'success', 'value'=>'100'))
                                             <span class="sr-only">100% Complete</span>
@@ -113,7 +113,7 @@
                                             <i class="fa fa-comments fa-5x"></i>
                                         </div>
                                     <div class="col-xs-9 text-right">
-                                    <div class="huge">2</div>
+                                    <h4>2</h4>
                                     <div>Nieuwe Uitnodigingen</div>
                                 </div>
                             </div>
@@ -128,7 +128,7 @@
                                             <i class="fa fa-book fa-5x"></i>
                                         </div>
                                     <div class="col-xs-9 text-right">
-                                    <div class="huge">5</div>
+                                    <h4>5</h4>
                                     <div>Nieuwe Feedback</div>
                                 </div>
                             </div>
