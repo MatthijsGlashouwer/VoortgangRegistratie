@@ -16,6 +16,17 @@ Route::get('/', function()
 	return View::make('home');
 });
 
+Route::get('/checklist', function()
+{
+	return View::make('checklist');
+});
+
+Route::get('/createchecklist', function()
+{
+	return View::make('createchecklist');
+});
+
+
 Route::get('/contact', function()
 {
 	return View::make('contact');
