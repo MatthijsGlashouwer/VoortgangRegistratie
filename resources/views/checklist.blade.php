@@ -23,8 +23,9 @@
                     </label>
                 </div>
             </div>
-            <div></div>
+            <a href="/leereenheden">
             <button type="submit" class="btn btn-default">Done</button>
+            </a>
         </form>
     </div>
     
