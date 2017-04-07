@@ -57,7 +57,7 @@
 <div class="col-sm-12" style="text-align: center;">
 @section('grid6_panel_body')
 	<h3>Feedback</h3>
-	
+
 	<div class="col-sm-4">
 	@section('grid7_panel_body')
 		<h3>Erwin</h3>
