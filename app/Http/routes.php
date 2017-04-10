@@ -26,6 +26,15 @@ Route::get('/createchecklist', function()
 	return View::make('createchecklist');
 });
 
+Route::get('/project', function()
+{
+	return View::make('project');
+});
+
+Route::get('/createproject', function()
+{
+	return View::make('createproject');
+});
 
 Route::get('/contact', function()
 {
