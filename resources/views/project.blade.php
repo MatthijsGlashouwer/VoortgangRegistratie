@@ -29,8 +29,8 @@
 	@endsection 
 	@include('widgets.panel', array('controls'=> true, 'as'=> 'grid2'))
 </div>
-
-<button type="button" class="btn btn-default" style="float:right; margin-right: 15px; margin-bottom: 20px;">
+ 
+<button type="button" class="btn btn-default" style="float:right; margin-right: 15px; margin-bottom: 20px;" id="buttonChecklist">
 	Checklist
 </button>
 
@@ -51,11 +51,14 @@
 @endsection
 @include('widgets.panel', array('controls'=> true, 'as'=> 'grid6'))
 </div>
-<button class=" btn btn-default" style="float:right; margin-right: 15px; margin-bottom: 20px;">
+
+<!-- Button checklist -->
+<button class=" btn btn-default" style="float:right; margin-right: 15px; margin-bottom: 20px;" id="buttonZR">
 	Zelf reflectie
 </button>
 
-<button class=" btn btn-default" style="float:left; margin-left: 15px; margin-bottom: 20px;">
+<!-- Button feedback request -->
+<button class=" btn btn-default" style="float:left; margin-left: 15px; margin-bottom: 20px;" id="buttonFV">
 	Feedback vragen
 </button>
 
