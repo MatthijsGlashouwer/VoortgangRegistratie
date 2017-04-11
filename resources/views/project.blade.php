@@ -29,10 +29,20 @@
 	@endsection 
 	@include('widgets.panel', array('controls'=> true, 'as'=> 'grid2'))
 </div>
- 
-<button type="button" class="btn btn-default" style="float:right; margin-right: 15px; margin-bottom: 20px;" id="buttonChecklist">
-	Checklist
-</button>
+
+<!-- button -->
+<div class="col-xs-12">
+	<div class="col-xs-2"></div>
+	<div class="col-xs-2"></div>
+	<div class="col-xs-2"></div>
+	<div class="col-xs-2"></div>
+	<div class="col-xs-2"></div>
+	<div class="col-xs-2">
+		<button type="button" class="btn btn-default" style="margin-bottom: 20px;" id="buttonChecklist">
+			Checklist
+		</button>
+	</div>
+</div>
 
 <!-- feedback -->
 <div class="col-sm-12" style="text-align: center;">
@@ -52,15 +62,23 @@
 @include('widgets.panel', array('controls'=> true, 'as'=> 'grid6'))
 </div>
 
-<!-- Button checklist -->
-<button class=" btn btn-default" style="float:right; margin-right: 15px; margin-bottom: 20px;" id="buttonZR">
-	Zelf reflectie
-</button>
-
-<!-- Button feedback request -->
-<button class=" btn btn-default" style="float:left; margin-left: 15px; margin-bottom: 20px;" id="buttonFV">
-	Feedback vragen
-</button>
+<!-- buttons -->
+<div class="col-xs-12" style="margin-bottom: 20px;">
+	<div class="col-xs-2">
+		<button type="button" class="btn btn-default" id="buttonFV">
+			Feedback vragen
+		</button>
+	</div>
+	<div class="col-xs-2"></div>
+	<div class="col-xs-2"></div>
+	<div class="col-xs-2"></div>
+	<div class="col-xs-2"></div>
+	<div class="col-xs-2">
+		<button type="button" class="btn btn-default" id="buttonZR">
+			Zelf reflectie
+		</button>
+	</div>
+</div>
 
 </html>
 

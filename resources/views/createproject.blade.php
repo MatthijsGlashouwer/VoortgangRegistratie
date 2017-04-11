@@ -69,13 +69,18 @@
 	</div>
 </div>
 
-
+<!-- Buttons -->
 <div class="col-xs-12" style="margin-bottom: 10px; margin-top:10px">
 	<div class="col-xs-2">
 		<button class=" btn btn-default" id="buttonStartProject">
 			Project starten
 		</button>
 	</div>
+
+	<div class="col-xs-2"></div>
+	<div class="col-xs-2"></div>
+	<div class="col-xs-2"></div>
+	<div class="col-xs-2"></div>
 
 	<div class="col-xs-2">
 		<button class=" btn btn-default" disabled id="buttonSaveProject">
