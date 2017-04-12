@@ -34,16 +34,6 @@
 			@endsection
 			@include('widgets.panel', array('controls'=> true, 'as'=> 'grid4'))
 		</div>
-		<div class="col-sm-3">
-			@section ('grid7_panel_body')
-			<h3>Leereenheid4</h3>
-			<h5>NLQF2</h5>
-			<a>Voortgang registratie</a> <br>
-			<a>Nao Robot</a>
-			<a class="pull-right"><i class="fa fa-arrow-circle-right"></i></a>
-			@endsection
-			@include('widgets.panel', array('controls'=> true, 'as'=> 'grid7'))
-		</div>
 	@endsection
 	@include('widgets.panel', array('controls'=> true, 'as'=> 'grid3'))
 </div>

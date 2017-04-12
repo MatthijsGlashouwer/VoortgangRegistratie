@@ -150,8 +150,6 @@
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
-
-
                         <li {{ (Request::is('/') ? 'class="active"' : '') }}>
                             <a href="{{ url ('') }}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
@@ -160,6 +158,9 @@
                         </li>
                         <li {{ (Request::is('/') ? 'class="active"' : '') }}>
                             <a href="{{ url ('projecten') }}"><i class="fa fa-dashboard fa-fw"></i> Projecten</a>
+                        </li>
+                        <li {{ (Request::is('/') ? 'class="active"' : '') }}>
+                            <a href="{{ url ('createproject') }}"><i class="fa fa-dashboard fa-fw"></i> Project aanmaken</a>
                         </li>
                     </ul>
                 </div>
