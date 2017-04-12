@@ -31,20 +31,6 @@ Route::get('/checklisttest', function()
 	return View::make('checklisttest');
 });
 
-Route::get('/creategroup', function()
-{
-	return View::make('creategroup');
-});
-Route::get('/project', function()
-{
-	return View::make('project');
-});
-Route::get('/createproject', function()
-{
-	return View::make('createproject');
-});
-
-
 
 Route::get('/contact', function()
 {
