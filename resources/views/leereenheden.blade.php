@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
 @section('page_heading','Leereenheden')
-@section('section')
+@section('content')
 
 <html>
 
