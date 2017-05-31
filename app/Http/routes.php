@@ -26,6 +26,11 @@ Route::get('/createchecklist', function()
 	return View::make('createchecklist');
 });
 
+Route::get('/group', function()
+{
+	return View::make('group');
+});
+
 Route::get('/checklisttest', function()
 {
 	return View::make('checklisttest');
