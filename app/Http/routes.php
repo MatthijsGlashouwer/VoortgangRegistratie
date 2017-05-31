@@ -31,20 +31,25 @@ Route::get('/group', function()
 	return View::make('group');
 });
 
+Route::get('/checklisttest', function()
+{
+	return View::make('checklisttest');
+});
+
 Route::get('/creategroup', function()
 {
 	return View::make('creategroup');
 });
-
 Route::get('/project', function()
 {
 	return View::make('project');
 });
-
 Route::get('/createproject', function()
 {
 	return View::make('createproject');
 });
+
+
 
 Route::get('/contact', function()
 {
@@ -127,3 +132,12 @@ Route::get('/documentation', function()
 {
 	return View::make('documentation');
 });
+
+// Authentication routes...
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
+// Registration routes...
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
