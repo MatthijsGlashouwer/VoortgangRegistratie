@@ -49,12 +49,8 @@ Route::get('/createproject', function()
 	return View::make('createproject');
 });
 
-
-
-Route::get('/contact', function()
-{
-	return View::make('contact');
-});
+Route::get('/contact/{id}', 'userController@index');
+Route::get('/contact/update/{id}', 'userController@update');
 
 Route::get('/projecten', function()
 {

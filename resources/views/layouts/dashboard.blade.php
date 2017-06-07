@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 @extends('layouts.plane')
 
 @section('body')
     <div id="wrapper">
-=======
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
@@ -22,7 +20,6 @@
 </head>
 <body>
  <div id="wrapper">
->>>>>>> origin/sander
 
         @yield('menu')
 
@@ -34,7 +31,7 @@
                 <!-- /.col-lg-12 -->
            </div>
 			<div class="row">  
-				@yield('content')
+				@yield('section')
 
             </div>
         <!-- /#page-wrapper -->
@@ -43,3 +40,4 @@
 </body>
 </html>
 
+@stop
