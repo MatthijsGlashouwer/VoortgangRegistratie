@@ -4,11 +4,6 @@ namespace App\Http\Controllers;
 
 class userController extends Controller
 {
-	public function index()
-	{
-		return view('contact')->with('name','Sander van Veenen');
-	}
-
 	public function create() 
 	{
 
@@ -16,7 +11,7 @@ class userController extends Controller
 
 	public function read($id) 
 	{
-
+		return view('contact')->with('name','Sander van Veenen');
 	}
 
 	public function update($id) 

@@ -11,14 +11,39 @@
 |
 */
 
+
+///		CONTACT
+Route::get('/contact/{id}', 'UserController@read');
+Route::get('/contact/update/{id}', 'UserController@update');
+
+///		PROJECT
+Route::get('project/{id}','ProjectController@read');
+Route::get('project/update/{id}','ProjectController@update');
+Route::get('project/create/{id}','ProjectController@create');
+Route::get('project/list/{userid}','ProjectController@listProjects');
+
+/// 	LEEREENHEDEN
+Route::get('/leereenheden', 'learningunitcontroller@index');
+//Route::get('/leereenheden/create', 'learningunitcontroller@create');
+//Route::get('/leereenheden/edit/{id}', 'learningunitcontroller@edit');
+//Route::get('/leereenheden/view/{id}', 'learningunitcontroller@view');
+
+///		GROUP
+Route::get('/group/{id}', 'GroupController@read');
+Route::get('/group/update/{id}', 'GroupController@update');
+Route::get('/group/create/{id}', 'GroupController@update');
+
+/// 	CHECKLIST
+Route::get('checklist/{id}','ChecklistController@read');
+Route::get('checklist/create/{id}','ChecklistController@create');
+
+/// 	FEEDBACK
+
+
+
 Route::get('/', function()
 {
 	return View::make('home');
-});
-
-Route::get('/checklist', function()
-{
-	return View::make('checklist');
 });
 
 Route::get('/createchecklist', function()
@@ -26,40 +51,14 @@ Route::get('/createchecklist', function()
 	return View::make('createchecklist');
 });
 
-Route::get('/group', function()
-{
-	return View::make('group');
-});
-
 Route::get('/checklisttest', function()
 {
 	return View::make('checklisttest');
 });
 
-Route::get('/creategroup', function()
-{
-	return View::make('creategroup');
-});
-Route::get('/project', function()
-{
-	return View::make('project');
-});
-Route::get('/createproject', function()
-{
-	return View::make('createproject');
-});
-
-Route::get('/contact/{id}', 'userController@index');
-Route::get('/contact/update/{id}', 'userController@update');
-
 Route::get('/projecten', function()
 {
 	return View::make('projecten');
-});
-
-Route::get( '/leereenheden', function()
-{
-	return View::make('leereenheden');
 });
 
 Route::get('/charts', function()
@@ -70,12 +69,6 @@ Route::get('/charts', function()
 Route::get('/tables', function()
 {
 	return View::make('table');
-});
-
-
-Route::get('/leereenheid', function()
-{
-	return View::make('leereenheid');
 });
 
 Route::get('/forms', function()
