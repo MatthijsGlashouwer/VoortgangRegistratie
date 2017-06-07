@@ -54,8 +54,8 @@ return [
 
 		'mysql' => [
 			'driver'    => 'mysql',
-			'host'      => env('DB_HOST', 'localhost:8080'),
-			'database'  => env('DB_DATABASE', 'forge'),
+			'host'      => env('DB_HOST', 'localhost:3306'),
+			'database'  => env('DB_DATABASE', 'voortgang'),
 			'username'  => env('DB_USERNAME', 'root'),
 			'password'  => env('DB_PASSWORD', ''),
 			'charset'   => 'utf8',
@@ -67,8 +67,8 @@ return [
 		'pgsql' => [
 			'driver'   => 'pgsql',
 			'host'     => env('DB_HOST', 'localhost'),
-			'database' => env('DB_DATABASE', 'forge'),
-			'username' => env('DB_USERNAME', 'forge'),
+			'database' => env('DB_DATABASE', 'voortgang	'),
+			'username' => env('DB_USERNAME', 'voortgang'),
 			'password' => env('DB_PASSWORD', ''),
 			'charset'  => 'utf8',
 			'prefix'   => '',
@@ -78,8 +78,8 @@ return [
 		'sqlsrv' => [
 			'driver'   => 'sqlsrv',
 			'host'     => env('DB_HOST', 'localhost'),
-			'database' => env('DB_DATABASE', 'forge'),
-			'username' => env('DB_USERNAME', 'forge'),
+			'database' => env('DB_DATABASE', 'voortgang'),
+			'username' => env('DB_USERNAME', 'voortgang'),
 			'password' => env('DB_PASSWORD', ''),
 			'prefix'   => '',
 		],

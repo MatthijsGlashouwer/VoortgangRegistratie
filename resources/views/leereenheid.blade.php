@@ -1,12 +1,12 @@
 @extends ('layouts.dashboard')
 @section('page_heading','Leereenheid')
-@section ('section')
+@section ('content')
 		            <div class="col-lg-3">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-9">
-                                    <div class="huge">Project 2</div>
+                                    <p class="huge">Project 2</p>
                                     <div>
                                     @include('widgets.progress', array('class'=> 'success', 'value'=>'20'))
                                             <span class="sr-only">20% Complete</span> 

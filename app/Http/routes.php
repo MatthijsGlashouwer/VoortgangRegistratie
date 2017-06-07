@@ -11,122 +11,17 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('home');
-});
-
-Route::get('/checklist', function()
-{
-	return View::make('checklist');
-});
-
-Route::get('/createchecklist', function()
-{
-	return View::make('createchecklist');
-});
-
-Route::get('/checklisttest', function()
-{
-	return View::make('checklisttest');
-});
-
-Route::get('/creategroup', function()
-{
-	return View::make('creategroup');
-});
-Route::get('/project', function()
-{
-	return View::make('project');
-});
-Route::get('/createproject', function()
-{
-	return View::make('createproject');
-});
+/* Leereenheden Controller */
+Route::get('/leereenheden', 'learningunitcontroller@index');
+Route::get('/leereenheden/create', 'learningunitcontroller@create');
+Route::get('/leereenheden/edit', 'learningunitcontroller@edit');
+Route::get('/leereenheden/view', 'learningunitcontroller@view');
 
 
 
-Route::get('/contact', function()
-{
-	return View::make('contact');
-});
+/*	Dashboard */
+Route::get('/', 'HomeController@index');
 
-Route::get('/projecten', function()
-{
-	return View::make('projecten');
-});
-
-Route::get( '/leereenheden', function()
-{
-	return View::make('leereenheden');
-});
-
-Route::get('/charts', function()
-{
-	return View::make('mcharts');
-});
-
-Route::get('/tables', function()
-{
-	return View::make('table');
-});
-
-
-Route::get('/leereenheid', function()
-{
-	return View::make('leereenheid');
-});
-
-Route::get('/forms', function()
-{
-	return View::make('form');
-});
-
-Route::get('/grid', function()
-{
-	return View::make('grid');
-});
-
-Route::get('/buttons', function()
-{
-	return View::make('buttons');
-});
-
-
-Route::get('/icons', function()
-{
-	return View::make('icons');
-});
-
-Route::get('/panels', function()
-{
-	return View::make('panel');
-});
-
-Route::get('/typography', function()
-{
-	return View::make('typography');
-});
-
-Route::get('/notifications', function()
-{
-	return View::make('notifications');
-});
-
-Route::get('/blank', function()
-{
-	return View::make('blank');
-});
-
-Route::get('/login', function()
-{
-	return View::make('login');
-});
-
-Route::get('/documentation', function()
-{
-	return View::make('documentation');
-});
 
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
