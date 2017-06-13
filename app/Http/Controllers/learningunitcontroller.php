@@ -17,10 +17,10 @@ class learningunitcontroller extends Controller
    		return view('leereenheden.index');
    }
 
-   public function create(Request $request)
+   public function create()
    {
 
-
+   		$tbllearningunit = tbllearningunit::all();
    		return view('leereenheden.create')->with('tbllearningunit',$tbllearningunit);
 
    }
