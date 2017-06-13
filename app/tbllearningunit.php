@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class tbllearningunit extends Model
 {
+<<<<<<< HEAD
+	protected $table = 'tbllearningunit';
+=======
     protected $table =	"tbllearningunit";
     
     public $timestamps = false;
@@ -18,4 +21,5 @@ class tbllearningunit extends Model
 
     }
 
+>>>>>>> origin/Matthijs
 }
