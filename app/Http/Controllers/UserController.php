@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\tblluser;
+
 class userController extends Controller
 {
 	public function create() 
@@ -16,8 +18,9 @@ class userController extends Controller
 
 	public function update($id) 
 	{
-		$user = tbluser::all();
-		return view('contact')->with('user',$user);
+		$tbluser = tbluser::all();
+		return view('contact')->with('tbluser',$tbluser);
+		///return view('leereenheden.view')->with('tbllearningunit',$tbllearningunit);
 	}
 
 	public function delete($id)
