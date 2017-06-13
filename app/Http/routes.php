@@ -11,7 +11,6 @@
 |
 */
 
-
 ///		CONTACT
 Route::get('/contact/{id}', 'UserController@read');
 Route::get('/contact/update/{id}', 'UserController@update');
@@ -54,10 +53,9 @@ Route::get('/createchecklist', function()
 	return View::make('createchecklist');
 });
 
-Route::get('/checklisttest', function()
-{
-	return View::make('checklisttest');
-});
+/*	Dashboard */
+Route::get('/', 'HomeController@index');
+
 
 Route::get('/projecten', function()
 {
@@ -124,6 +122,7 @@ Route::get('/documentation', function()
 {
 	return View::make('documentation');
 });
+
 
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
