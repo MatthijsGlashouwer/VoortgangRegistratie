@@ -10,6 +10,7 @@
 	@section ('grid1_panel_body')
 		<div class="col-sm-3">
 			@section ('grid2_panel_body')
+			<!--Gebruik $tbllearningunit uit learningunitcontroller -->
 			<h3> {{ $tbllearningunit }} </h3>
 			<h5>NLQF1<h5>
 			<A>Voortgang registratie</A>
