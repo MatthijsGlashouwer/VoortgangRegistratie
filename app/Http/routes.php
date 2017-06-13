@@ -36,9 +36,12 @@ Route::get('/group/create/{id}', 'GroupController@update');
 /// 	CHECKLIST
 Route::get('checklist/{id}','ChecklistController@read');
 Route::get('checklist/create/{id}','ChecklistController@create');
+Route::get('checklist/update/{id}','ChecklistController@update');
 
 /// 	FEEDBACK
-
+Route::get('feedback/{id}','feedbackcontroller@read');
+Route::get('feedback/create/{id}','feedbackcontroller@create');
+Route::get('feedback/update/{id}','feedbackcontroller@update');
 
 
 Route::get('/', function()
