@@ -19,13 +19,7 @@ class learningunitcontroller extends Controller
 
    public function create(Request $request)
    {
-   		//* $tbllearningunit = new tbllearningunit; 
 
-   		// $Title = $request->('Title');
-
-   		// $tbllearningunit->NLQF = Input::get('NLQF', false);
-
-   		// $tbllearningunit->save(); 
 
    		return view('leereenheden.create')->with('tbllearningunit',$tbllearningunit);
 
