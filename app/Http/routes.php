@@ -23,9 +23,9 @@ Route::get('project/list/{userid}','ProjectController@listProjects');
 
 /// 	LEEREENHEDEN
 Route::get('/leereenheden', 'learningunitcontroller@index');
-//Route::get('/leereenheden/create', 'learningunitcontroller@create');
-//Route::get('/leereenheden/edit/{id}', 'learningunitcontroller@edit');
-//Route::get('/leereenheden/view/{id}', 'learningunitcontroller@view');
+Route::get('/leereenheden/create', 'learningunitcontroller@create');
+Route::get('/leereenheden/edit/{id}', 'learningunitcontroller@update');
+Route::get('/leereenheden/view/{id}', 'learningunitcontroller@view');
 
 ///		GROUP
 Route::get('/group/{id}', 'GroupController@read');
@@ -55,12 +55,6 @@ Route::get('/createchecklist', function()
 
 /*	Dashboard */
 Route::get('/', 'HomeController@index');
-
-
-Route::get('/projecten', function()
-{
-	return View::make('projecten');
-});
 
 Route::get('/charts', function()
 {
