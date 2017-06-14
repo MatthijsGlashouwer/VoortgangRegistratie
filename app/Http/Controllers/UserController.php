@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\tblluser;
+use App\tblusergroup;
+use App\tbluser;
 
 class userController extends Controller
 {
@@ -13,13 +13,14 @@ class userController extends Controller
 
 	public function read($id) 
 	{
-		return view('contact')->with('name','Sander van Veenen');
+		$tbluser = tbluser::find([0]);
+		return view('contact.contact')->with('tbluser',$tbluser);
 	}
 
 	public function update($id) 
 	{
-		$tbluser = tbluser::all();
-		return view('contact')->with('tbluser',$tbluser);
+		//$tbluser = tbluser::all();
+		//return view('contact.contact')->with('tbluser',$tbluser);
 		///return view('leereenheden.view')->with('tbllearningunit',$tbllearningunit);
 	}
 

@@ -8,4 +8,5 @@ class tbllearningunit extends Model
 {
 
 	protected $table = 'tbllearningunit';
+
 }

@@ -2,7 +2,7 @@
 
 @section('page_heading','Panels and Collapsibles')
 
-@section('section')
+@section('content')
 	<div class="col-sm-6">
 		@section ('panel1_panel_title', 'Default title')
 		@section ('panel1_panel_body')

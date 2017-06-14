@@ -54,8 +54,10 @@ return [
 
 		'mysql' => [
 			'driver'    => 'mysql',
+
 			'host'      => env('DB_HOST', 'localhost:3306'),
 			'host'      => env('DB_HOST', 'localhost:8080'),
+
 			'database'  => env('DB_DATABASE', 'voortgang'),
 			'username'  => env('DB_USERNAME', 'root'),
 			'password'  => env('DB_PASSWORD', ''),
