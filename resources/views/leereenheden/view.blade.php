@@ -9,11 +9,13 @@
 <div class="col-sm-12">
 	@section ('grid1_panel_body')
 		<div class="col-sm-3">
+			@foreach ($tbllearningunit as $tbllearningunit)
 			@section ('grid2_panel_body')
-			<!--Gebruik $tbllearningunit uit learningunitcontroller -->
-			<h3> {{ $tbllearningunit }} </h3>
-			<h5>NLQF1<h5>
-			<A>Voortgang registratie</A>
+			<h3> {{ $tbllearningunit->Title }} </h3>
+			<h5> NLQF Niveau: {{ $tbllearningunit->NLQF }}<h5>
+			<h5> Cohort: {{ $tbllearningunit->Cohort}}
+			<h5> Crebo: {{ $tbllearningunit->Crebo}}
+			<a>Voortgang registratie {{ $tbllearningunit->Link}} </a>
 			<a class="pull-right"><i class="fa fa-arrow-circle-right"></i></a>
 			@endsection
 			@include('widgets.panel', array('controls'=> true, 'as'=> 'grid2'))
@@ -28,12 +30,13 @@
 	@section ('grid3_panel_body')
 		<div class="col-sm-3">
 			@section ('grid4_panel_body')
-			<h3>Title</h3>
-			<h5>NLQF:4</h5>
+			<h3> {{	$tbllearningunit->Title}}</h3>
+			<h5>NLQF Niveau: {{ $tbllearningunit->NLQF}}</h5>
 			<a>NAO robot</a>
 			<a class="pull-right"><i class="fa fa-arrow-circle-right"></i></a>
 			@endsection
 			@include('widgets.panel', array('controls'=> true, 'as'=> 'grid4'))
+			@endforeach
 		</div>
 	@endsection
 	@include('widgets.panel', array('controls'=> true, 'as'=> 'grid3'))

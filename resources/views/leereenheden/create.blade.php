@@ -7,9 +7,19 @@
 <!-- Title-->
 <div class="col-xs-12">
 	<div class="col-xs-4">
-	<form action="Title" method="post">
-	<h3></h3>
-	<input class="form-control" id="inputTitle">
+	<form action="leereenheden/view" method="post">
+	<input type="hidden" name="_token" value="{{ csrf_token()}}">
+	<table>
+            <tr>
+               <td>Leeereenheid Titel</td>
+               <td><input type='text' name='LEname' /></td>
+            </tr>
+            <tr>
+               <td colspan = '2'>
+                  <input type = 'submit' value = "Add LE"/>
+               </td>
+            </tr>
+    </table>
 	</div>
 </div>
 
