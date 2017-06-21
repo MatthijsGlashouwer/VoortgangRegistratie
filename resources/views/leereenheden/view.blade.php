@@ -19,6 +19,7 @@
 			<a class="pull-right"><i class="fa fa-arrow-circle-right"></i></a>
 			@endsection
 			@include('widgets.panel', array('controls'=> true, 'as'=> 'grid2'))
+			@endforeach
 		</div>
 	@endsection
 	@include('widgets.panel', array('controls'=> true, 'as'=> 'grid1'))
@@ -32,24 +33,26 @@
 			@section ('grid4_panel_body')
 			<h3> {{	$tbllearningunit->Title}}</h3>
 			<h5>NLQF Niveau: {{ $tbllearningunit->NLQF}}</h5>
-			<a>NAO robot</a>
+			<h5>Cohort: {{ $tbllearningunit->Cohort }}</h5>
+			<h5>Crebo: {{ $tbllearningunit->Crebo }}</h5>
 			<a class="pull-right"><i class="fa fa-arrow-circle-right"></i></a>
 			@endsection
 			@include('widgets.panel', array('controls'=> true, 'as'=> 'grid4'))
-			@endforeach
+			
 		</div>
 	@endsection
 	@include('widgets.panel', array('controls'=> true, 'as'=> 'grid3'))
 </div>
 
 <!-- Non active -->
+
 <h3>Niet actief</h3>
 <div class="col-sm-12">
 	@section ('grid5_panel_body')
 		<div class="col-sm-3">
 			@section ('grid6_panel_body')
-			<h3>Leereenheid2</h3>
-			<h5>NLQF2</h5>
+			<h3>{{ $tbllearningunit->Title}}</h3>
+			<h5></h5>
 			<a>Voortgangregistratie</a>
 			<a class="pull-right"><i class="fa fa-arrow-circle-right"></i></a>
 			@endsection

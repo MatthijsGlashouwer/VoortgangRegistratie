@@ -11,7 +11,7 @@
 	<input type="hidden" name="_token" value="{{ csrf_token()}}">
 	<table>
             <tr>
-               <td>Leeereenheid Titel</td>
+               <td>Leereenheid Titel</td>
                <td><input type='text' name='LEname' /></td>
             </tr>
             <tr>

@@ -23,30 +23,22 @@ class learningunitcontroller extends Controller
       return view('leereenheden.create');
     }
 
-   public function store(Request $request)
+   public function store(CreateLearningunitRequest $request)
    {
 
-      $tbllearningunit = $request->input('LEname');
-      // DB::insert('',[$tbllearningunit]);
-   	/*	$tbllearningunit = new tbllearningunit;
+        $tbllearningunit = new tbllearningunit;
+        $tbllearningunit['Title'] = $request["Title"];
+        $tbllearningunit['NLQF'] = $request["NLQF"];
+        $tbllearningunit['Crebo'] = $request["Crebo"];
+        $tbllearningunit['Cohort'] = $request["Cohort"];
 
-         $tbllearningunit->Title = $request->Title;
-         
-         $tbllearningunit->NLQF = $request->NLQF;
-         
-         $tbllearningunit->Cohort = $request->Cohort;
-         
-         $tbllearningunit->Crebo = $request->Crebo;
-   		
-         $tbllearningunit->save(); */
-
-         return view('leereenheden.create')->with('tbllearningunit',$tbllearningunit); 
+        return view('leereenheden.create')->with('tbllearningunit',$tbllearningunit); 
 
    }
 
    public function view()
    {
-   		$tbllearningunit = tbllearningunit::find([2,5]);
+   		$tbllearningunit = tbllearningunit::find([2,5,3]);
    		return view('leereenheden.view')->with('tbllearningunit',$tbllearningunit);
 
    }

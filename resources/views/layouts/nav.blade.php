@@ -1,5 +1,4 @@
 @extends('layouts.plane')
-
 @section('menu')
 	<!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
