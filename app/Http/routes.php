@@ -12,14 +12,16 @@
 */
 
 ///		CONTACT
-Route::get('/contact/{id}', 'UserController@read');
-Route::get('/contact/update/{id}', 'UserController@update');
+Route::get('/contact', 'UserController@list');
+Route::get('/contact/view/{id}', 'UserController@read');
+Route::get('/contact/update/{id?}', 'UserController@update');
+
 
 ///		PROJECT
-Route::get('project/{id}','ProjectController@read');
-Route::get('project/update/{id}','ProjectController@update');
-Route::get('project/create/{id}','ProjectController@create');
-Route::get('project/list/{userid}','ProjectController@listProjects');
+Route::get('project/{uid?}','ProjectController@listProjects');
+Route::get('project/view/{pid}','ProjectController@read');
+Route::get('project/update/{pid?}','ProjectController@update');
+
 
 /// 	LEEREENHEDEN
 Route::get('/leereenheden', 'learningunitcontroller@index');

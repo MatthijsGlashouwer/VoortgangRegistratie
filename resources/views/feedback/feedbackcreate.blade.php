@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
 @section('page_heading','Feedback geven')
-@section('section')
+@section('content')
 
 <html>
 	<div class="col-xs-12">
