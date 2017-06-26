@@ -6,22 +6,21 @@ use App\tbluser;
 
 class userController extends Controller
 {
-	public function create() 
-	{
-
-	}
-
 	public function read($id) 
 	{
-		$tbluser = tbluser::find([0]);
+		$tbluser = tbluser::Find([$id]);
 		return view('contact.contact')->with('tbluser',$tbluser);
 	}
 
-	public function update($id) 
+	public function update($id = -1) 
 	{
-		//$tbluser = tbluser::all();
-		//return view('contact.contact')->with('tbluser',$tbluser);
-		///return view('leereenheden.view')->with('tbllearningunit',$tbllearningunit);
+		if ($id == -1) { // If id is -1 create a new contact
+			return view('contact.contactcreate');
+		} else { // Edit existing contact
+			$tbluser = tbluser::Find([$id]);
+			return view('contact.contactupdate')->with('tbluser',$tbluser);
+		}
+		
 	}
 
 	public function delete($id)

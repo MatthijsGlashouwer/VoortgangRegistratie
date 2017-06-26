@@ -23,4 +23,14 @@ class UserFroupController extends Controller
 	{
 		
 	}
+
+	public function listGroup($grpup_id)
+	{
+
+	}
+
+	public function listUser($user_id)
+	{
+
+	}
 }
