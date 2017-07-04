@@ -12,21 +12,23 @@
 */
 
 ///		CONTACT
+Route::get('/contact', 'UserController@list'); 
 Route::get('/contact/{id}', 'UserController@read');
 Route::get('/contact/update/{id}', 'UserController@update');
 
 ///		PROJECT
-Route::get('project/{id}','ProjectController@read');
-Route::get('project/update/{id}','ProjectController@update');
-Route::get('project/create/{id}','ProjectController@create');
-Route::get('project/list/{userid}','ProjectController@listProjects');
+Route::get('project/{uid?}','ProjectController@listProjects');
+Route::get('project/view/{pid}','ProjectController@read');
+Route::get('project/update/{pid?}','ProjectController@update');
+
 
 /// 	LEEREENHEDEN
 Route::get('/leereenheden', 'learningunitcontroller@index');
 Route::post('/leereenheden/create', 'learningunitcontroller@store');
+Route::get('/leereenheden/create', 'learningunitcontroller@store');
 Route::get('/leereenheden/edit/{id}', 'learningunitcontroller@edit');
 Route::get('/leereenheden/view/{id}', 'learningunitcontroller@view');
-Route::get('/leereenheden/create','learningunitcontroller@insertform');
+
 
 ///		GROUP
 Route::get('/group/{id}', 'GroupController@read');

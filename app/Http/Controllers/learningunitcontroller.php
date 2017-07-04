@@ -9,6 +9,7 @@ use App\tbllearningunit;
 use App\tblusergroup;
 use Input;
 use App;
+use Validator;
 
 
 class learningunitcontroller extends Controller
@@ -23,23 +24,40 @@ class learningunitcontroller extends Controller
       return view('leereenheden.create');
     }
 
-   public function store(CreateLearningunitRequest $request)
+   public function store(Request $request)
    {
+        $rules = array(
+            'Title' => 'required',
+            'Description' =>  'required',
+            'NLQF'  => 'required',
+            'Crebo' => 'required',
+            'Cohort'  => 'require'
+        );
 
+
+        $validator = Validator::make($request->all(), $rules);
+        
+        if ($validator->fails()) {
+            return Redirect('leereenheden.create')->withInput()->withErrors($validator->messages());
+        }
+        else {
         $tbllearningunit = new tbllearningunit;
-        $tbllearningunit['Title'] = $request["Title"];
-        $tbllearningunit['NLQF'] = $request["NLQF"];
-        $tbllearningunit['Crebo'] = $request["Crebo"];
-        $tbllearningunit['Cohort'] = $request["Cohort"];
-
-        return view('leereenheden.create')->with('tbllearningunit',$tbllearningunit); 
-
+        $tbllearningunit->Title = $request["Title"];
+        $tbllearningunit->NLQF = $request["NLQF"];
+        $tbllearningunit->Crebo = $request["Crebo"];
+        $tbllearningunit->Cohort = $request["Cohort"];
+        $tbllearningunit->save();
+        if($tbllearningunit->save()){
+            return Redirect('leereenheden.view')->withMessage($tbllearningunit->Title . " is toegevoegd.");
+        }
+        // return view('leereenheden.create')->with('tbllearningunit',$tbllearningunit); 
+        }
    }
 
    public function view()
    {
-   		$tbllearningunit = tbllearningunit::find([2,5,3]);
-   		return view('leereenheden.view')->with('tbllearningunit',$tbllearningunit);
+   		$tbllearningunit = tbllearningunit::all();
+   		return view('leereenheden.view')->with('klaar',$tbllearningunit);
 
    }
    public function edit()
