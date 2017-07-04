@@ -7,18 +7,19 @@
 <!-- Title-->
 <div class="col-xs-12">
 	<div class="col-xs-4">
-	<form action="leereenheden/view" method="post">
+	<form action="leereenheden/create" method="post">
 	<input type="hidden" name="_token" value="{{ csrf_token()}}">
 	<table>
-            <tr>
-               <td>Leereenheid Titel</td>
-               <td><input type='text' name='LEname' /></td>
-            </tr>
-            <tr>
-               <td colspan = '2'>
-                  <input type = 'submit' value = "Add LE"/>
-               </td>
-            </tr>
+        <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
+        <label for="title" class="col-md-4 control-label">Titel</label>
+        <div class="col-md-6">
+        <input id="title" type="text" class="form-control" name="title" required autofocus>
+        </div>
+        <span class="help-block">
+        <strong>Vul een titel in</strong>
+        </span>
+        </div>
+
     </table>
 	</div>
 </div>
