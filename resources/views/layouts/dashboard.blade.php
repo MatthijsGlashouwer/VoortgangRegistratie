@@ -1,6 +1,7 @@
-@extends('layouts.plane')
-@section('body')
-    <div id="wrapper">
+
+@include('layouts.nav')
+
+
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
@@ -20,7 +21,7 @@
 <body>
  <div id="wrapper">
 
-        @yield('menu')
+        @yield('nav')
 
         <div id="page-wrapper">
 			 <div class="row">
@@ -39,4 +40,4 @@
 </body>
 </html>
 
-@stop
+

@@ -6,17 +6,17 @@ class ProjectController extends Controller
 {
 	public function create()
 	{
-		return view('createproject');
+		return view('project.createproject');
 	}
 
 	public function read($id)
 	{
-		return view('project');
+		return view('project.project');
 	}
 
 	public function update($id)
 	{
-		return view('createproject');
+		return view('project.createproject');
 	}
 
 	public function delete($id)
@@ -26,6 +26,6 @@ class ProjectController extends Controller
 
 	public function listProjects()
 	{
-		return view('projects');
+		return view('project.projects');
 	}
 }

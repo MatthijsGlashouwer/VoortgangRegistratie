@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
 @section('page_heading','Project')
-@section('section')
+@section('content')
 
 <html>
 
