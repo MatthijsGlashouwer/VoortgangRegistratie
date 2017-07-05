@@ -9,4 +9,5 @@ class tbllearningunit extends Model
 
 	protected $table = 'tbllearningunit';
 
+	public $timestamps = false;
 }

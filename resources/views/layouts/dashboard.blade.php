@@ -1,4 +1,6 @@
+
 @include('layouts.nav')
+
 
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
