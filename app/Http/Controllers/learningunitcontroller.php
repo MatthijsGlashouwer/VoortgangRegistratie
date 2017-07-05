@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Input;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\tbllearningunit;
 use App\tblusergroup;
-use Input;
 use App;
 use Validator;
 
@@ -38,7 +38,7 @@ class learningunitcontroller extends Controller
         $validator = Validator::make($request->all(), $rules);
         
         if ($validator->fails()) {
-            return Redirect('leereenheden.create')->withInput()->withErrors($validator->messages());
+            return Redirect('leereenheden/create')->withInput()->withErrors($validator->messages());
         }
         else {
         $tbllearningunit = new tbllearningunit;
@@ -48,7 +48,7 @@ class learningunitcontroller extends Controller
         $tbllearningunit->Cohort = $request["Cohort"];
         $tbllearningunit->save();
         if($tbllearningunit->save()){
-            return Redirect('leereenheden.view')->withMessage($tbllearningunit->Title . " is toegevoegd.");
+            return Redirect('leereenheden/view')->withMessage($tbllearningunit->Title . " is toegevoegd.");
         }
         // return view('leereenheden.create')->with('tbllearningunit',$tbllearningunit); 
         }
