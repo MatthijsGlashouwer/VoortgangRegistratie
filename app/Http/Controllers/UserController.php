@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use app\tblgroup;
 use App\tblusergroup;
 use App\tbluser;
 
@@ -8,8 +9,9 @@ class userController extends Controller
 {
 	public function read($id) 
 	{
-		$tbluser = tbluser::Find([$id]);
-		return view('contact.contact')->with('tbluser',$tbluser);
+		$users = tbluser::Find([$id]);
+		//dd($users[0]->user_id);
+		return view('contact.contact')->with('users',$users);
 	}
 
 	public function update($id = -1) 
@@ -17,8 +19,8 @@ class userController extends Controller
 		if ($id == -1) { // If id is -1 create a new contact
 			return view('contact.contactcreate');
 		} else { // Edit existing contact
-			$tbluser = tbluser::Find([$id]);
-			return view('contact.contactupdate')->with('tbluser',$tbluser);
+			$users = tbluser::Find([$id]);
+			return view('contact.contactupdate')->with('users',$users);
 		}
 		
 	}
@@ -28,8 +30,14 @@ class userController extends Controller
 
 	}
 
+	//public function list(){
+	//	$users = tbluser::all();
+	//}
+
 	public function listGroup($groupId)
 	{
-
+		$users = tblusergroup::where('group_id','=',$groupid)->get();
+		
+		//$group = tbluser::find([$users]);
 	}
 }

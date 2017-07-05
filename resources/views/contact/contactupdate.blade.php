@@ -11,23 +11,23 @@
 
   <div class="clearfix"></div>    
   <div class="col-sm-5 col-xs-6 tital">Naam:</div>             
-  <input class="form-control" rows="1" name="name" value="{{$tbluser[0]['Name']}}">
+  <input class="form-control" rows="1" name="name" value="{{$users[0]['Name']}}">
   
   <div class="col-sm-5 col-xs-6 tital">Email:</div>            
-  <input class="form-control" rows="1" name="Email" value="{{$tbluser[0]['Email']}}">
+  <input class="form-control" rows="1" name="Email" value="{{$users[0]['Email']}}">
   
 
   <div class="col-sm-5 col-xs-6 tital">Telefoon nummer:</div>  
-  <input class="form-control" rows="1" name="Phone" value="{{$tbluser[0]['Phone']}}">
+  <input class="form-control" rows="1" name="Phone" value="{{$users[0]['Phone']}}">
   
   <div class="col-sm-5 col-xs-6 tital">Student nummer:</div>   
-  <input class="form-control" rows="1" name="Student_Id" value="{{$tbluser[0]['Student_Id']}}">
+  <input class="form-control" rows="1" name="Student_Id" value="{{$users[0]['Student_Id']}}">
 
   <div class="col-sm-5 col-xs-6 tital">Crebo:</div>            
-  <input class="form-control" rows="1" name="Crebo" value="{{$tbluser[0]['Crebo']}}">
+  <input class="form-control" rows="1" name="Crebo" value="{{$users[0]['Crebo']}}">
 
   <div class="col-sm-5 col-xs-6 tital">Cohort:</div>           
-  <input class="form-control" rows="1" name="Cohort" value="{{$tbluser[0]['Cohort']}}">
+  <input class="form-control" rows="1" name="Cohort" value="{{$users[0]['Cohort']}}">
   
   <br>
 

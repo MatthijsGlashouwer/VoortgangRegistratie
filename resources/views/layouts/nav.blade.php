@@ -1,6 +1,4 @@
-@extends('layouts.plane')
-
-@section('menu')
+@section('nav')
 	<!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
