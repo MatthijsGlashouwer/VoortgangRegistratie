@@ -2,10 +2,6 @@
 @section('page_heading','Contact')
 @section('content')
 
-<?php
-dd($users);
-?>
-
 
 <div class="col-md-7 ">
 
