@@ -1,5 +1,3 @@
-<?php
-
 namespace App\Http\Controllers;
 
 use App\tblproject;
@@ -63,4 +61,5 @@ class ProjectController extends Controller
         $projects = tblproject::all();
         return view('project.projects', ['projects' => $projects]);
     }
+
 }
