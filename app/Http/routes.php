@@ -18,8 +18,9 @@ Route::get('/contact/update/{id}', 'UserController@update');
 
 ///		PROJECT
 Route::get('project/{uid?}','ProjectController@listProjects');
-Route::get('project/view/{pid}','ProjectController@read');
-Route::get('project/update/{pid?}','ProjectController@update');
+Route::get('project/view/{id}','ProjectController@read');
+Route::get('project/update/{id?}','ProjectController@update');
+Route::post('project/create', 'ProjectController@create');
 
 
 /// 	LEEREENHEDEN
