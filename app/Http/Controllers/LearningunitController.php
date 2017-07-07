@@ -36,9 +36,10 @@ class learningunitcontroller extends Controller
 
 
         $validator = Validator::make($request->all(), $rules);
-        
+
         if ($validator->fails()) {
-            return Redirect('leereenheden/create')->withInput()->withErrors($validator->messages());
+            //return Redirect('leereenheden/create')->withInput()->withErrors($validator->messages());
+          return view('leereenheden.create');//->withInput()->withErrors($validator->messages());
         }
         else {
         $tbllearningunit = new tbllearningunit;
