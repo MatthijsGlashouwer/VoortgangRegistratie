@@ -17,7 +17,7 @@ Route::get('/', 'homecontroller@index');
 //Route::get('/contact/{id?}', 'UserController@list'); 
 Route::get('/contact/{id}', 'UserController@read');
 Route::get('/contact/update/{id?}', 'UserController@update');
-Route::post('/contact/update/{id}', 'UserController@update');
+Route::post('/contact/update/{id}', 'UserController@store');
 
 ///		LEEREENHEDEN
 Route::get('/leereenheden', 'learningunitcontroller@index');
