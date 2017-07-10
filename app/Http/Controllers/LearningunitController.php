@@ -48,7 +48,7 @@ class learningunitcontroller extends Controller
         $tbllearningunit->Cohort = $request->Cohort;
         $tbllearningunit->save();
         if($tbllearningunit->save()){
-            return Redirect('leereenheden/view')->withMessage($tbllearningunit->Title . " is toegevoegd.");
+            return Redirect('leereenheden/view/1')->withMessage($tbllearningunit->Title . " is toegevoegd.");
         }
         // return view('leereenheden.create')->with('tbllearningunit',$tbllearningunit); 
         }
