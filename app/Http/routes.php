@@ -25,12 +25,12 @@ Route::get('/leereenheden/edit/{id}', 'learningunitcontroller@edit');
 Route::post('/leereenheden/edit/{id}', 'learningunitcontroller@edit');
 Route::get('/leereenheden/view/{id}', 'learningunitcontroller@view');
 
-///		PROJECT
-Route::get('project/{uid}','ProjectController@listProjects');
-Route::get('project/view/{id}','ProjectController@read');
-Route::get('/project/edit/{id}', 'learningunitcontroller@edit');
-Route::post('/project/edit/{id}', 'learningunitcontroller@edit');
-
+Route::get('project','ProjectController@listProjects');
+Route::get('project/create','ProjectController@View');
+Route::post('project/create','ProjectController@Create');
+Route::get('project/{uid?}','ProjectController@listProjects');
+Route::get('/leereenheden/edit/{id}', 'learningunitcontroller@edit');
+Route::post('/leereenheden/edit/{id}', 'learningunitcontroller@edit');
 
 /*
 ///		PROJECT
