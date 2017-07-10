@@ -35,7 +35,7 @@ class ProjectController extends Controller
             $project = new tblproject();
             $project->Title = $request->Title;
             $project->Description = $request->Description;
-            $project->Status_Id = $request->status;
+            $project->Status_Id = $request->Status;
             $project->Startdate = strtotime($request->startdate);
             $project->Updatedate = 1;
             $project->Updateuser_Id = 1;
