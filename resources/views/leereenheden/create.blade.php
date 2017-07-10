@@ -2,37 +2,49 @@
 @section('page_heading','Leereenheid aanmaken')
 @section('content')
 
-<html>
-
-<!-- Title-->
-<div class="col-xs-12">
-	<div class="col-xs-4">
-		<form action="view/1" method="POST">
-			{{ csrf_field() }}
-			<label for="Title">Title</label>
-			<input type="text" name="Title" id="Title">
-			<br>
-			<label for="Link">Link</label>
-			<input type="text" name="Link" id="Link">
-			<br>
-			<label for="NLQF">NLQF</label>
-			<input type="text" name="NLQF" id="NLQF">
-			<br>
-			<label for="Cohort">Cohort</label>
-			<input type="text" name="Cohort" id="Cohort">
-			<br>
-			<label for="Crebo">Crebo</label>
-			<input type="text" name="Crebo" id="Crebo">
-			<br>
-			<input type="submit" name="submit" value="Toevoegen">	
-		</form>
-	</div>
-</div>
+	@if ($errors->any())
+		<div class="alert alert-danger">
+			<ul>
+				@foreach ($errors->all() as $error)
+					<li>{{ $error }}</li>
+				@endforeach
+			</ul>
+		</div>
+	@endif
 
 
 
+	<form action="{{ action('LearningunitController@create') }}" method="post">
+		<input type="hidden" name="_token" value="{{ csrf_token() }}">
+		<div class="col-xs-12">
+			<h3>Titel</h3>
+            {{ Form::text('Title', '', array('class' => 'form-control')) }}
+		</div>
+
+	<form action="{{ action('LearningunitController@create') }}" method="post">
+		<div class="col-xs-12">
+			<h3>NLQF</h3>
+            {{ Form::text('NLQF', '', array('class' => 'form-control')) }}
+		</div>
+
+	<form action="{{ action('LearningunitController@create') }}" method="post">
+		<div class="col-xs-12">
+			<h3>Crebo</h3>
+            {{ Form::text('Crebo', '', array('class' => 'form-control')) }}
+		</div>
+	<form action="{{ action('LearningunitController@create') }}" method="post">
+		<div class="col-xs-12">
+			<h3>Cohort</h3>
+            {{ Form::text('Cohort', '', array('class' => 'form-control')) }}
+		</div>
+
+	<div class="col-xs-12" style="margin-bottom: 10px; margin-top:10px">
+			<div class="col-xs-2">
+				<input type="submit" class=" btn btn-default" id="buttonStartLE" value="LE opslaan">
+			</div>
 
 
 
-</html>
+
+
 @stop

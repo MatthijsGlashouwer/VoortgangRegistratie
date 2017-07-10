@@ -19,7 +19,7 @@ class learningunitcontroller extends Controller
    		return view('leereenheden.index');
       }
 
-   public function insertform()
+   public function create()
     {
       return view('leereenheden.create');
     }
@@ -28,28 +28,27 @@ class learningunitcontroller extends Controller
    {
         $rules = array(
             'Title' => 'required',
-            'Description' =>  'required',
             'NLQF'  => 'required',
             'Crebo' => 'required',
-            'Cohort'  => 'require'
+            'Cohort'  => 'required'
         );
 
 
         $validator = Validator::make($request->all(), $rules);
 
         if ($validator->fails()) {
-            //return Redirect('leereenheden/create')->withInput()->withErrors($validator->messages());
-          return view('leereenheden.create');//->withInput()->withErrors($validator->messages());
+            return Redirect('leereenheden/create')->withInput()->withErrors($validator->messages());
+          //return view('leereenheden.create')->withInput()->withErrors($validator->messages());
         }
         else {
         $tbllearningunit = new tbllearningunit;
-        $tbllearningunit->Title = $request["Title"];
-        $tbllearningunit->NLQF = $request["NLQF"];
-        $tbllearningunit->Crebo = $request["Crebo"];
-        $tbllearningunit->Cohort = $request["Cohort"];
+        $tbllearningunit->Title = $request->Title;
+        $tbllearningunit->NLQF = $request->NLQF;
+        $tbllearningunit->Crebo = $request->Crebo;
+        $tbllearningunit->Cohort = $request->Cohort;
         $tbllearningunit->save();
         if($tbllearningunit->save()){
-            return Redirect('leereenheden/view')->withMessage($tbllearningunit->Title . " is toegevoegd.");
+            return Redirect('leereenheden/view/1')->withMessage($tbllearningunit->Title . " is toegevoegd.");
         }
         // return view('leereenheden.create')->with('tbllearningunit',$tbllearningunit); 
         }

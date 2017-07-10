@@ -18,10 +18,10 @@ Route::get('/contact/update/{id}', 'UserController@update');
 Route::post('/contact/update/{id}', 'UserController@update');
 
 ///		LEEREENHEDEN
-Route::get('/leereenheden', 'learningunitcontroller@index');
-Route::get('/leereenheden/edit/{id}', 'learningunitcontroller@edit');
-Route::post('/leereenheden/edit/{id}', 'learningunitcontroller@edit');
-Route::get('/leereenheden/view/{id}', 'learningunitcontroller@view');
+Route::get('/leereenheden', 'LearningunitController@index');
+Route::get('/leereenheden/create', 'LearningunitController@create');
+Route::post('/leereenheden/create', 'LearningunitController@store');
+Route::get('/leereenheden/view/{id}', 'LearningunitController@view');
 
 ///		PROJECT
 Route::get('project/{uid?}','ProjectController@listProjects');
