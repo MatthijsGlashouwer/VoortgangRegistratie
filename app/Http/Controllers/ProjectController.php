@@ -20,8 +20,8 @@ class ProjectController extends Controller
         $rules = array(
             'Title' => 'required',
             'Description' =>  'required',
-            //'status' =>     'required|digits_between:0,3',
-            'startdate' => 'required|',
+            'Status' =>     'required|digits_between:0,2',
+            'startdate' => 'required',
             'enddate' => 'required|after:startdate',
             'deadline'=> 'after:startdate'
         );
@@ -35,7 +35,7 @@ class ProjectController extends Controller
             $project = new tblproject();
             $project->Title = $request->Title;
             $project->Description = $request->Description;
-            $project->Status_Id = 1;//$request->status;
+            $project->Status_Id = $request->Status;
             $project->Startdate = strtotime($request->startdate);
             $project->Updatedate = 1;
             $project->Updateuser_Id = 1;
