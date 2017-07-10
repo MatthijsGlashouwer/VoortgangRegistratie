@@ -158,10 +158,10 @@
                             <a href="{{ url ('leereenheden/create') }}"><i class="fa fa-user fa-fw"></i> Leereenheid aanmaken</a>
                         </li>                        
                         <li {{ (Request::is('/') ? 'class="active"' : '') }}>
-                            <a href="{{ url ('projecten') }}"><i class="fa fa-dashboard fa-fw"></i> Projecten</a>
+                            <a href="{{ url ('project') }}"><i class="fa fa-dashboard fa-fw"></i> Projecten</a>
                         </li>
                         <li {{ (Request::is('/') ? 'class="active"' : '') }}>
-                            <a href="{{ url ('createproject') }}"><i class="fa fa-dashboard fa-fw"></i> Project aanmaken</a>
+                            <a href="{{ url ('project/create') }}"><i class="fa fa-dashboard fa-fw"></i> Project aanmaken</a>
                         </li>
                     </ul>
                 </div>

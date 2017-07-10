@@ -1,24 +1,25 @@
 @extends('layouts.dashboard')
 @section('page_heading','Projecten')
-@section('section')
-           
-<div class="row col-lg-12"> <!-- row -->
+@section('content')
 
-    <div class="col-lg-4"><!-- Width box -->
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-9">
-                        <div class="huge">Project 1</div>
-                        <div> 
-                            @include('widgets.progress', array('class'=> 'success', 'value'=>'90'))
-                            <span class="sr-only">90% Complete (success)</span>
+    <div class="row col-lg-12"> <!-- row -->
+        @foreach($projects as $project)
+            <div class="col-lg-4"><!-- Width box -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-9">
+                                <div class="huge">{{ $project->Title }}</div>
+                                <div>
+                                    @include('widgets.progress', array('class'=> 'success', 'value'=>'90'))
+                                    <span class="sr-only">90% Complete (success)</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div> <!-- End box -->
-
-</div>  <!-- end row -->              
+            </div> <!-- End box -->
+        @endforeach
+    </div>  <!-- end row -->
+    <a href="{{ action('ProjectController@View') }}" class="btn btn-success">Nieuw project</a>
 @stop
