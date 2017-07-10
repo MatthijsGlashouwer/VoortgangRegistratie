@@ -9,7 +9,10 @@
       <br>
   </div> <!-- col sm 6 -->
 
-  <div class="clearfix"></div>    
+  <div class="clearfix"></div>
+
+  
+
   <div class="col-sm-5 col-xs-6 tital">Naam:</div>             
   <input class="form-control" rows="1" name="name" value="{{$users[0]['Name']}}">
   
@@ -32,6 +35,8 @@
   <br>
 
   <button type="button" class="btn btn-default btn-outline">Contact opslaan</button>
+
+
 
 </div> <!-- col md 7 -->
 </html>

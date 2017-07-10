@@ -16,6 +16,8 @@ class userController extends Controller
 
 	public function update($id = -1) 
 	{
+		
+
 		if ($id == -1) { // If id is -1 create a new contact
 			return view('contact.contactcreate');
 		} else { // Edit existing contact
@@ -23,6 +25,19 @@ class userController extends Controller
 			return view('contact.contactupdate')->with('users',$users);
 		}
 		
+	}
+
+	public function store(Request $request)
+	{
+		$rules = array(
+			'Name' => 'required',
+			'Student_Id' => 'required',
+			'Crebo' => 'required',
+			'Cohort' => 'required',
+			'Role_User' => 'Required'
+		);
+
+		$validator = Validator::make($request->all(), $rules);
 	}
 
 	public function delete($id)

@@ -10,11 +10,13 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
+///		Dashboard
+Route::get('/', 'homecontroller@index');
 
 ///		CONTACT
-Route::get('/contact/{id?}', 'UserController@list'); 
+//Route::get('/contact/{id?}', 'UserController@list'); 
 Route::get('/contact/{id}', 'UserController@read');
-Route::get('/contact/update/{id}', 'UserController@update');
+Route::get('/contact/update/{id?}', 'UserController@update');
 Route::post('/contact/update/{id}', 'UserController@update');
 
 ///		LEEREENHEDEN
@@ -24,9 +26,10 @@ Route::post('/leereenheden/edit/{id}', 'learningunitcontroller@edit');
 Route::get('/leereenheden/view/{id}', 'learningunitcontroller@view');
 
 ///		PROJECT
-Route::get('project/{uid?}','ProjectController@listProjects');
-Route::get('/leereenheden/edit/{id}', 'learningunitcontroller@edit');
-Route::post('/leereenheden/edit/{id}', 'learningunitcontroller@edit');
+Route::get('project/{uid}','ProjectController@listProjects');
+Route::get('project/view/{id}','ProjectController@read');
+Route::get('/project/edit/{id}', 'learningunitcontroller@edit');
+Route::post('/project/edit/{id}', 'learningunitcontroller@edit');
 
 
 /*
