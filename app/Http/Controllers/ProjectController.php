@@ -20,8 +20,8 @@ class ProjectController extends Controller
         $rules = array(
             'Title' => 'required',
             'Description' =>  'required',
-            'Status' =>     'required|digits_between:0,2',
-            'startdate' => 'required',
+            'status' =>     'required|digits_between:0,3',
+            'startdate' => 'required|',
             'enddate' => 'required|after:startdate',
             'deadline'=> 'after:startdate'
         );
