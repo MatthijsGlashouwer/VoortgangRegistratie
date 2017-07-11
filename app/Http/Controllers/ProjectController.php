@@ -1,3 +1,5 @@
+<?php
+
 namespace App\Http\Controllers;
 
 use App\tblproject;
@@ -10,14 +12,18 @@ class ProjectController extends Controller
 {
     public function view()
     {
-        return view('project.createproject');
+        return View('project.createproject');
     }
 
     public function Create(Request $request)
     {
         $rules = array(
             'Title' => 'required',
-            'Description' =>  'required'
+            'Description' =>  'required',
+            'status' =>     'required|digits_between:0,3',
+            'startdate' => 'required|',
+            'enddate' => 'required|after:startdate',
+            'deadline'=> 'after:startdate'
         );
 
 
@@ -29,12 +35,12 @@ class ProjectController extends Controller
             $project = new tblproject();
             $project->Title = $request->Title;
             $project->Description = $request->Description;
-            $project->Status_Id = 1;
-            $project->Startdate = 1;
+            $project->Status_Id = $request->Status;
+            $project->Startdate = strtotime($request->startdate);
             $project->Updatedate = 1;
             $project->Updateuser_Id = 1;
-            $project->Enddate = 1;
-            $project->Deadline = 1;
+            $project->Enddate = strtotime($request->enddate);
+            $project->Deadline = strtotime($request->deadline);
             if($project->save()){
                 return Redirect('project')->withMessage($project->Title . " is toegevoegd.");
             }
