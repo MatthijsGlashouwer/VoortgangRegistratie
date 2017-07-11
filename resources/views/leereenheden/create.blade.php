@@ -40,6 +40,7 @@
 
 	<div class="col-xs-12" style="margin-bottom: 10px; margin-top:10px">
 			<div class="col-xs-2">
+				<input type="submit" class=" btn btn-default" id="buttonStartLE" value="Leereenheid Opslaan">
 			</div>
 
 
