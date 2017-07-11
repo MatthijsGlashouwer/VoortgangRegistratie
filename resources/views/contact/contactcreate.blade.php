@@ -20,39 +20,39 @@
 
   <div class="clearfix"></div>  
 
-  <form action="{{ action('UserController@store') }}" method="post">
+  <form action="{{ action('UserController@create') }}" method="post">
 
   <input type="hidden" name="_token" value="{{ csrf_token() }}">
     <div class="col-xs-12">
       <h3>Naam:</h3>
-        {{ Form::text('Name', '', array('class' => 'form-control')) }}
+        {{ Form::text('Name','', array('class' => 'form-control') ) }}
     </div>
 
-    <form action="{{ action('UserController@store') }}" method="post">
+    <form action="{{ action('UserController@create') }}" method="post">
     <div class="col-xs-12">
       <h3>Email:</h3>
-            {{ Form::text('Email', '', array('class' => 'form-control')) }}
+            {{ Form::text('Email', '', array('class' => 'form-control') ) }}
     </div>
 
-    <form action="{{ action('UserController@store') }}" method="post">
+    <form action="{{ action('UserController@create') }}" method="post">
     <div class="col-xs-12">
       <h3>Telefoon nummer:</h3>
-            {{ Form::text('Phone', '', array('class' => 'form-control')) }}
+            {{ Form::text('Phone', '', array('class' => 'form-control') ) }}
     </div>
 
-    <form action="{{ action('UserController@store') }}" method="post">
+    <form action="{{ action('UserController@create') }}" method="post">
     <div class="col-xs-12">
       <h3>Student nummer:</h3>
-            {{ Form::text('Student_Id', '', array('class' => 'form-control')) }}
+            {{ Form::text('Student_Id', '', array('class' => 'form-control') ) }}
     </div>
 
-    <form action="{{ action('UserController@store') }}" method="post">
+    <form action="{{ action('UserController@create') }}" method="post">
     <div class="col-xs-12">
       <h3>Crebo:</h3>
-            {{ Form::text('Crebo', '', array('class' => 'form-control')) }}
+            {{ Form::text('Crebo', '', array('class' => 'form-control') ) }}
     </div>
 
-    <form action="{{ action('UserController@store') }}" method="post">
+    <form action="{{ action('UserController@create') }}" method="post">
     <div class="col-xs-12">
       <h3>Cohort:</h3>
             {{ Form::text('Cohort', '', array('class' => 'form-control')) }}

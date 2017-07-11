@@ -24,8 +24,6 @@ class userController extends Controller
 
 	public function update($id = -1) 
 	{
-		
-
 		if ($id == -1) { // If id is -1 create a new contact
 			return view('contact.contactcreate');
 		} else { // Edit existing contact
@@ -35,22 +33,45 @@ class userController extends Controller
 		
 	}
 
-	public function store(Request $request)
+	public function create(Request $request)
 	{
 		$rules = array(
-			'Name' => 'required',
-			'Email' => 'required',
-			'Phone' => 'required',
-			'Student_Id' => 'required',
-			'Crebo' => 'required',
-			'Cohort' => 'required',
+			'Name' 			=> 'required|alpha',
+			'Email' 		=> 'email',
+			'Phone' 		=> 'digits:10',
+			'Student_Id' 	=> 'required|numeric',
+			'Crebo' 		=> 'required|digits:4',
+			'Cohort' 		=> 'required|digits:4',
 		);
 
-		$validator = Validator::make($request->all(), $rules);
+		$messages = array(
+			'Name.required'			=> 'Naam is verplicht',
+			'Name.alpha'			=> 'Naam mag alleen uit letters bestaan',
+
+			'Email.email'			=> 'Geen geldig email adres',
+
+			'Phone.digits'			=> 'Geen geldig telefoon nummer',
+
+			'Student_Id.required'	=> 'Student nummer is verplicht',
+			'Student_Id.numeric'	=> 'Student nummer kan alleen uit nummers bestaan',
+
+			'Crebo.required'		=> 'Crebo is verplicht',
+
+			'Cohort.required'		=> 'Cohort is verplicht',
+		);
+
+		$validator = Validator::make($request->all(), $rules, $messages);
 
 		if($validator->fails()) {
 			return Redirect('/contact/update/-1')->withInput()->withErrors($validator->messages());
 		} else {
+			/*
+			if ($id == -1){
+				$tbluser = new tbluser;
+			} else {
+				$tbluser = tbluser::find([$id]);
+			}
+			*/
 			$tbluser = new tbluser;
 			$tbluser->Name = $request->Name;
 			$tbluser->Email = $request->Email;
@@ -60,7 +81,7 @@ class userController extends Controller
 			$tbluser->Cohort = $request->Cohort;
 			$tbluser->save();
 			if($tbluser->save()){
-				return Redirect('/')->withMessage($tbluser->Name . " is toegevoegd.");
+				return Redirect('/contact/view/1');
 			}
 		}
 	}
