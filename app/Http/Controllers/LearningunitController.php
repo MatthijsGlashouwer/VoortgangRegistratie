@@ -27,18 +27,24 @@ class learningunitcontroller extends Controller
    public function store(Request $request)
    {
         $rules = array(
-            'Title' => 'required',
+            'Title' => 'required | alpha',
             'NLQF'  => 'required',
             'Crebo' => 'required',
             'Cohort'  => 'required'
         );
 
+        $messages = array(
+            'Title.required' => 'Titel is verplicht in te vullen.', 
+            'NLQF.required' => 'NLQF is verplicht in te vullen.',
+            'Crebo.required' => 'Crebo is verplicht in te vullen.',
+            'Cohort.required' => 'Cohort is verplicht in te vullen.'
+        );
 
-        $validator = Validator::make($request->all(), $rules);
+
+        $validator = Validator::make($request->all(), $rules,$messages);
 
         if ($validator->fails()) {
             return Redirect('leereenheden/create')->withInput()->withErrors($validator->messages());
-          //return view('leereenheden.create')->withInput()->withErrors($validator->messages());
         }
         else {
         $tbllearningunit = new tbllearningunit;
@@ -46,11 +52,11 @@ class learningunitcontroller extends Controller
         $tbllearningunit->NLQF = $request->NLQF;
         $tbllearningunit->Crebo = $request->Crebo;
         $tbllearningunit->Cohort = $request->Cohort;
+        $tbllearningunit->status = 2;
         $tbllearningunit->save();
         if($tbllearningunit->save()){
             return Redirect('leereenheden/view/1')->withMessage($tbllearningunit->Title . " is toegevoegd.");
         }
-        // return view('leereenheden.create')->with('tbllearningunit',$tbllearningunit); 
         }
    }
 
@@ -62,7 +68,7 @@ class learningunitcontroller extends Controller
    }
    public function edit()
    {     
-         $tbllearningunit = App\tbllearningunit::find(2);
+         $tbllearningunit = tbllearningunit::find(2);
 
          $tbllearningunit->Title = 'test';
 

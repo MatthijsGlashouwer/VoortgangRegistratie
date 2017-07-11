@@ -2,7 +2,7 @@
 @section('page_heading','Leereenheden')
 @section('content')
 
-<html>
+
 
 <!-- Done -->
 @include('widgets.leereenheden', array('klaar'=> $klaar, 'title'=> 'Klaar', 'status'=>0))
@@ -12,6 +12,6 @@
 
 
 
-</html>
+
 
 @stop
