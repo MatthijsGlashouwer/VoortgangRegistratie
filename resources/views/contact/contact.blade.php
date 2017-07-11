@@ -15,13 +15,23 @@
   <div class="clearfix"></div>    
   <div class="col-sm-5 col-xs-6 tital">Naam:</div>             <div class="col-sm-7 col-xs-6 ">{{$users[0]['Name']}}</div>
 
+  <br>
+
   <div class="col-sm-5 col-xs-6 tital">Email:</div>            <div class="col-sm-7">{{$users[0]['Email']}}</div>
+
+  <br>
 
   <div class="col-sm-5 col-xs-6 tital">Telefoon nummer:</div>  <div class="col-sm-7">{{$users[0]['Phone']}}</div>
 
+  <br>
+
   <div class="col-sm-5 col-xs-6 tital">Student nummer:</div>   <div class="col-sm-7">{{$users[0]['Student_Id']}}</div>
 
+  <br>
+
   <div class="col-sm-5 col-xs-6 tital">Crebo:</div>            <div class="col-sm-7">{{$users[0]['Crebo']}}</div>
+
+  <br>
 
   <div class="col-sm-5 col-xs-6 tital">Cohort:</div>           <div class="col-sm-7 col-xs-6 ">{{$users[0]['Cohort']}}</div>
 
