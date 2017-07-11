@@ -10,11 +10,11 @@
 				<h5> NLQF Niveau: {{ $t->NLQF }}</h5>
 				<h5> Cohort: {{ $t->Cohort}}</h5>
 				<h5> Crebo: {{ $t->Crebo}}</h5>
-				<a>Voortgang registratie {{ $t->Link}} </a>
-				<a class="pull-right"><i class="fa fa-arrow-circle-right"></i></a>
+				<a href="{{ url ('leereenheden/edit/-1') }}"><i class="fa fa-arrow-circle-right"></i> Leereenheid aanpassen</a>
 				</div>
 				@endif
 			@endforeach
+			 
 		</div>
 	
 	
