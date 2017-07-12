@@ -155,13 +155,13 @@
                             <a href="{{ url ('leereenheden/view/1') }}"><i class="fa fa-user fa-fw"></i> Leereenheden</a>
                         </li>
                         <li {{ (Request::is('/') ? 'class="active"' : '') }}>
-                            <a href="{{ url ('leereenheden/edit/-1') }}"><i class="fa fa-user fa-fw"></i> Leereenheid aanmaken</a>
+                            <a href="{{ url ('leereenheden/update/-1') }}"><i class="fa fa-user fa-fw"></i> Leereenheid aanmaken</a>
                         </li>                        
                         <li {{ (Request::is('/') ? 'class="active"' : '') }}>
-                            <a href="{{ url ('project') }}"><i class="fa fa-dashboard fa-fw"></i> Projecten</a>
+                            <a href="{{ url ('/project/list/1') }}"><i class="fa fa-dashboard fa-fw"></i> Projecten</a>
                         </li>
                         <li {{ (Request::is('/') ? 'class="active"' : '') }}>
-                            <a href="{{ url ('project/create') }}"><i class="fa fa-dashboard fa-fw"></i> Project aanmaken</a>
+                            <a href="{{ url ('project/update/-1') }}"><i class="fa fa-dashboard fa-fw"></i> Project aanmaken</a>
                         </li>
                     </ul>
                 </div>

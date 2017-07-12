@@ -18,19 +18,19 @@ class ProjectController extends Controller
     public function Store(Request $request)
     {
         $rules = array(
-            'Title' => 'required',
-            'Description' =>  'required',
-            'status' =>     'required|digits_between:0,3',
-            'startdate' => 'required|',
-            'enddate' => 'required|after:startdate',
-            'deadline'=> 'after:startdate'
+            'Title'         => 'required',
+            'Description'   => 'required',
+            'status'        => 'digits_between:0,2',
+            'startdate'     => 'required|',
+            'enddate'       => 'required|after:startdate',
+            'deadline'      => 'after:startdate'
         );
 
 
         $validator = Validator::make($request->all(), $rules);
 
         if ($validator->fails()) {
-            return Redirect('project/create')->withInput()->withErrors($validator->messages());
+            return Redirect('project/update/-1')->withInput()->withErrors($validator->messages());
         } else {
             $project = new tblproject();
             $project->Title = $request->Title;
@@ -41,8 +41,9 @@ class ProjectController extends Controller
             $project->UpdateUserId = 1;
             $project->EndDate = strtotime($request->enddate);
             $project->Deadline = strtotime($request->deadline);
+            $project->save();
             if($project->save()){
-                return Redirect('project')->withMessage($project->Title . " is toegevoegd.");
+                return Redirect('project/list/1')->withMessage($project->Title . " is toegevoegd.");
             }
         }
     }
@@ -52,10 +53,15 @@ class ProjectController extends Controller
         return view('project.project');
     }
 
-    public function update($id)
+    public function update($id = -1)
     {
-        if ($id == -1 ) {return view('project.createproject'); }
-        else {}
+        if ($id == -1 ) {
+            return view('project.createproject'); 
+        }
+        else 
+        {
+            return view('project.createproject');
+        }
     }
 
     public function delete($id)
@@ -63,7 +69,7 @@ class ProjectController extends Controller
 
     }
 
-    public function listProjects()
+    public function listProjects($id)
     {
         $projects = tblproject::all();
         return view('project.projects', ['projects' => $projects]);

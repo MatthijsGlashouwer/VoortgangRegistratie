@@ -16,36 +16,19 @@ Route::get('/', 'homecontroller@index');
 ///		CONTACT
 //Route::get('/contact/{id?}', 'UserController@list'); 
 Route::get('/contact/{id}', 'UserController@read');
-Route::get('/contact/update/{id?}', 'UserController@update');
+Route::get('/contact/update/{id}', 'UserController@update');
 Route::post('/contact/update/{id}', 'UserController@store');
 
 ///		LEEREENHEDEN
-Route::get('/leereenheden', 'LearningunitController@index');
-Route::get('/leereenheden/create', 'LearningunitController@create');
-Route::post('/leereenheden/create', 'LearningunitController@store');
-Route::get('/leereenheden/view/{id}', 'LearningunitController@view');
+Route::get('/leereenheden/view/{id}', 'LearningunitController@read');
+Route::get('/leereenheden/update/{id}', 'LearningunitController@update');
+Route::post('/leereenheden/update/{id}', 'LearningunitController@store');
 
 ///		Project
-Route::get('/project/{id}', 'UserController@read');
-Route::get('/project/update/{id?}', 'UserController@update');
-Route::post('/project/update/{id}', 'UserController@store');
-Route::get('project/list/{uid?}','ProjectController@listProjects');
-
-/*
-///		PROJECT
-Route::get('project/{uid?}','ProjectController@listProjects');
-Route::get('project/view/{id}','ProjectController@read');
-Route::get('project/update/{id?}','ProjectController@update');
-Route::post('project/create', 'ProjectController@create');
-
-
-/// 	LEEREENHEDEN
-Route::get('/leereenheden', 'learningunitcontroller@index');
-Route::post('/leereenheden/create', 'learningunitcontroller@store');
-Route::get('/leereenheden/create', 'learningunitcontroller@store');
-Route::get('/leereenheden/edit/{id}', 'learningunitcontroller@edit');
-Route::get('/leereenheden/view/{id}', 'learningunitcontroller@view');
-*/
+Route::get('/project/{id}', 'ProjectController@read');
+Route::get('/project/update/{id}', 'ProjectController@update');
+Route::post('/project/update/{id}', 'ProjectController@store');
+Route::get('/project/list/{uid}','ProjectController@listProjects');
 
 ///		GROUP
 Route::get('/group/{id}', 'GroupController@read');

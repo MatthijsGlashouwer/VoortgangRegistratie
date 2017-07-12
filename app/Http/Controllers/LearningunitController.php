@@ -14,16 +14,6 @@ use Validator;
 
 class learningunitcontroller extends Controller
 {
-   //public function index()
-   //   {
-   //		return view('leereenheden.index');
-   //   }
-
-   public function create()
-    {
-      return view('leereenheden.create');
-    }
-
    public function store(Request $request)
    {
         $rules = array(
@@ -44,7 +34,7 @@ class learningunitcontroller extends Controller
         $validator = Validator::make($request->all(), $rules,$messages);
 
         if ($validator->fails()) {
-            return Redirect('leereenheden/create')->withInput()->withErrors($validator->messages());
+            return Redirect('leereenheden/update/-1')->withInput()->withErrors($validator->messages());
         }
         else {
         $tbllearningunit = new tbllearningunit;
@@ -66,16 +56,16 @@ class learningunitcontroller extends Controller
    		return view('leereenheden.view')->with('klaar',$tbllearningunit);
 
    }
-   public function update()
-   {     
-         $tbllearningunit = tbllearningunit::find(2);
-
-         $tbllearningunit->Title = 'test';
-
-         $tbllearningunit->save();
-
-   		return view('leereenheden.edit');
-
+   public function update($id = -1)
+   {   
+      if ($id == -1) {  
+        return view('leereenheden.create');
+      } else {
+        $tbllearningunit = tbllearningunit::find(1);
+        $tbllearningunit->Title = 'test';
+        $tbllearningunit->save();
+        return view('leereenheden.edit');
+      }
    }
 
    public function delete()
