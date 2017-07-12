@@ -20,7 +20,7 @@
 
   <div class="clearfix"></div>  
 
-  <form action="{{ action('UserController@create') }}" method="post">
+  <form action="{{ action('UserController@store') }}" method="post">
 
   <input type="hidden" name="_token" value="{{ csrf_token() }}">
     <div class="col-xs-12">
@@ -28,31 +28,31 @@
         {{ Form::text('Name', $users[0]->Name, array('class' => 'form-control') ) }}
     </div>
 
-    <form action="{{ action('UserController@create') }}" method="post">
+    <form action="{{ action('UserController@store') }}" method="post">
     <div class="col-xs-12">
       <h3>Email:</h3>
             {{ Form::text('Email', $users[0]->Email, array('class' => 'form-control') ) }}
     </div>
 
-    <form action="{{ action('UserController@create') }}" method="post">
+    <form action="{{ action('UserController@store') }}" method="post">
     <div class="col-xs-12">
       <h3>Telefoon nummer:</h3>
             {{ Form::text('Phone', $users[0]->Phone, array('class' => 'form-control') ) }}
     </div>
 
-    <form action="{{ action('UserController@create') }}" method="post">
+    <form action="{{ action('UserController@store') }}" method="post">
     <div class="col-xs-12">
       <h3>Student nummer:</h3>
-            {{ Form::text('Student_Id', $users[0]->Student_Id, array('class' => 'form-control') ) }}
+            {{ Form::text('StudentId', $users[0]->StudentId, array('class' => 'form-control') ) }}
     </div>
 
-    <form action="{{ action('UserController@create') }}" method="post">
+    <form action="{{ action('UserController@store') }}" method="post">
     <div class="col-xs-12">
       <h3>Crebo:</h3>
             {{ Form::text('Crebo', $users[0]->Crebo, array('class' => 'form-control') ) }}
     </div>
 
-    <form action="{{ action('UserController@create') }}" method="post">
+    <form action="{{ action('UserController@store') }}" method="post">
     <div class="col-xs-12">
       <h3>Cohort:</h3>
             {{ Form::text('Cohort', $users[0]->Cohort, array('class' => 'form-control')) }}

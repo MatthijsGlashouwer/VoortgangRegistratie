@@ -33,13 +33,18 @@ class userController extends Controller
 		
 	}
 
-	public function create(Request $request)
+	public function delete($id)
+	{
+
+	}
+
+	public function store(Request $request)
 	{
 		$rules = array(
 			'Name' 			=> 'required|alpha',
 			'Email' 		=> 'email',
 			'Phone' 		=> 'digits:10',
-			'Student_Id' 	=> 'required|numeric',
+			'StudentId' 	=> 'required|numeric',
 			'Crebo' 		=> 'required|digits:4',
 			'Cohort' 		=> 'required|digits:4',
 		);
@@ -52,8 +57,8 @@ class userController extends Controller
 
 			'Phone.digits'			=> 'Geen geldig telefoon nummer',
 
-			'Student_Id.required'	=> 'Student nummer is verplicht',
-			'Student_Id.numeric'	=> 'Student nummer kan alleen uit nummers bestaan',
+			'StudentId.required'	=> 'Student nummer is verplicht',
+			'StudentId.numeric'		=> 'Student nummer kan alleen uit nummers bestaan',
 
 			'Crebo.required'		=> 'Crebo is verplicht',
 
@@ -73,22 +78,17 @@ class userController extends Controller
 			}
 			*/
 			$tbluser = new tbluser;
-			$tbluser->Name = $request->Name;
-			$tbluser->Email = $request->Email;
-			$tbluser->Phone = $request->Phone;
-			$tbluser->Student_Id = $request->Student_Id;
-			$tbluser->Crebo = $request->Crebo;
-			$tbluser->Cohort = $request->Cohort;
+			$tbluser->Name 		= $request->Name;
+			$tbluser->Email 	= $request->Email;
+			$tbluser->Phone 	= $request->Phone;
+			$tbluser->StudentId = $request->StudentId;
+			$tbluser->Crebo 	= $request->Crebo;
+			$tbluser->Cohort 	= $request->Cohort;
 			$tbluser->save();
 			if($tbluser->save()){
 				return Redirect('/contact/view/1');
 			}
 		}
-	}
-
-	public function delete($id)
-	{
-
 	}
 
 	//public function list(){
@@ -97,7 +97,7 @@ class userController extends Controller
 
 	public function listGroup($groupId)
 	{
-		$users = tblusergroup::where('group_id','=',$groupid)->get();
+		$users = tblusergroup::where('groupId','=',$groupid)->get();
 		
 		//$group = tbluser::find([$users]);
 	}
