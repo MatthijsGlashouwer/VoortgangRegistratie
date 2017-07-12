@@ -14,10 +14,10 @@ use Validator;
 
 class learningunitcontroller extends Controller
 {
-   public function index()
-      {
-   		return view('leereenheden.index');
-      }
+   //public function index()
+   //   {
+   //		return view('leereenheden.index');
+   //   }
 
    public function create()
     {
@@ -60,13 +60,13 @@ class learningunitcontroller extends Controller
         }
    }
 
-   public function view()
+   public function read()
    {
    		$tbllearningunit = tbllearningunit::all();
    		return view('leereenheden.view')->with('klaar',$tbllearningunit);
 
    }
-   public function edit()
+   public function update()
    {     
          $tbllearningunit = tbllearningunit::find(2);
 
