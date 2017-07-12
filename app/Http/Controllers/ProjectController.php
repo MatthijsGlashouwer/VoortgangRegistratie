@@ -12,10 +12,10 @@ class ProjectController extends Controller
 {
     public function view()
     {
-        return View('project.createproject');
+        return Read('project.createproject');
     }
 
-    public function Create(Request $request)
+    public function Store(Request $request)
     {
         $rules = array(
             'Title' => 'required',
@@ -35,11 +35,11 @@ class ProjectController extends Controller
             $project = new tblproject();
             $project->Title = $request->Title;
             $project->Description = $request->Description;
-            $project->Status_Id = $request->Status;
-            $project->Startdate = strtotime($request->startdate);
-            $project->Updatedate = 1;
-            $project->Updateuser_Id = 1;
-            $project->Enddate = strtotime($request->enddate);
+            $project->StatusId = $request->Status;
+            $project->StartDate = strtotime($request->startdate);
+            $project->UpdateDate = 1;
+            $project->UpdateUserId = 1;
+            $project->EndDate = strtotime($request->enddate);
             $project->Deadline = strtotime($request->deadline);
             if($project->save()){
                 return Redirect('project')->withMessage($project->Title . " is toegevoegd.");
@@ -54,7 +54,8 @@ class ProjectController extends Controller
 
     public function update($id)
     {
-        return view('project.createproject');
+        if ($id == -1 ) {return view('project.createproject'); }
+        else {}
     }
 
     public function delete($id)
