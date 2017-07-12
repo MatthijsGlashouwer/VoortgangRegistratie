@@ -21,5 +21,5 @@
             </div> <!-- End box -->
         @endforeach
     </div>  <!-- end row -->
-    <a href="{{ action('ProjectController@View') }}" class="btn btn-success">Nieuw project</a>
+    <a href="{{ action('ProjectController@update') }}" class="btn btn-success">Nieuw project</a>
 @stop

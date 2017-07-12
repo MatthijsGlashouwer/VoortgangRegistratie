@@ -14,25 +14,25 @@
 
 
 
-	<form action="{{ action('LearningunitController@create') }}" method="post">
+	<form action="{{ action('LearningunitController@store') }}" method="post">
 		<input type="hidden" name="_token" value="{{ csrf_token() }}">
 		<div class="col-xs-12">
 			<h3>Titel</h3>
             {{ Form::text('Title', '', array('class' => 'form-control')) }}
 		</div>
 
-	<form action="{{ action('LearningunitController@create') }}" method="post">
+	<form action="{{ action('LearningunitController@store') }}" method="post">
 		<div class="col-xs-12">
 			<h3>NLQF</h3>
             {{ Form::number('NLQF', 'value') }}
 		</div>
 
-	<form action="{{ action('LearningunitController@create') }}" method="post">
+	<form action="{{ action('LearningunitController@store') }}" method="post">
 		<div class="col-xs-12">
 			<h3>Crebo</h3>
             {{ Form::number('Crebo', 'value') }}
 		</div>
-	<form action="{{ action('LearningunitController@create') }}" method="post">
+	<form action="{{ action('LearningunitController@store') }}" method="post">
 		<div class="col-xs-12">
 			<h3>Cohort</h3>
             {{ Form::number('Cohort', 'value') }}

@@ -12,7 +12,7 @@
 			</ul>
 		</div>
 	@endif
-	<form action="{{ action('ProjectController@View') }}" method="post">
+	<form action="{{ action('ProjectController@store') }}" method="post">
 		<input type="hidden" name="_token" value="{{ csrf_token() }}">
 		<div class="col-xs-12">
 			<h3>Titel</h3>
