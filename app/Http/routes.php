@@ -17,7 +17,7 @@ Route::get('/', 'homecontroller@index');
 //Route::get('/contact/{id?}', 'UserController@list'); 
 Route::get('/contact/{id}', 'UserController@read');
 Route::get('/contact/update/{id?}', 'UserController@update');
-Route::post('/contact/update/{id}', 'UserController@create');
+Route::post('/contact/update/{id}', 'UserController@store');
 
 ///		LEEREENHEDEN
 Route::get('/leereenheden', 'LearningunitController@index');
@@ -25,12 +25,11 @@ Route::get('/leereenheden/create', 'LearningunitController@create');
 Route::post('/leereenheden/create', 'LearningunitController@store');
 Route::get('/leereenheden/view/{id}', 'LearningunitController@view');
 
-Route::get('project','ProjectController@listProjects');
-Route::get('project/create','ProjectController@View');
-Route::post('project/create','ProjectController@Create');
-Route::get('project/{uid?}','ProjectController@listProjects');
-Route::get('/leereenheden/edit/{id}', 'learningunitcontroller@edit');
-Route::post('/leereenheden/edit/{id}', 'learningunitcontroller@edit');
+///		Project
+Route::get('/project/{id}', 'UserController@read');
+Route::get('/project/update/{id?}', 'UserController@update');
+Route::post('/project/update/{id}', 'UserController@store');
+Route::get('project/list/{uid?}','ProjectController@listProjects');
 
 /*
 ///		PROJECT
